@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDemoproductsTable extends Migration
+class Manufactures extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateDemoproductsTable extends Migration
      */
     public function up()
     {
-        Schema::create('demoproducts', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::create('manufactures', function (Blueprint $table) {
+            $table->id('Manu_ID');
+            $table->string('Manu_Name');
         });
     }
 
@@ -26,6 +26,6 @@ class CreateDemoproductsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('demoproducts');
+        //
     }
 }

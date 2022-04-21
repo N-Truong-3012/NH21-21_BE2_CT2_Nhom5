@@ -14,5 +14,5 @@ use App\Http\Controllers\MyController;
 |
 */
 
-Route::get('/',[MyController::class,'index']);
+Route::get('/',[MyController::class,'getAllProducts']);
 Route::get('/{id}',[MyController::class,'goto']);
