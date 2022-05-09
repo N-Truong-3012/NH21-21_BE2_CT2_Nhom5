@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+//use app\Http\Controllers\MyController;
 use App\Http\Controllers\MyController;
 
 /*
@@ -14,5 +15,12 @@ use App\Http\Controllers\MyController;
 |
 */
 
-Route::get('/',[MyController::class,'getAllProducts']);
-Route::get('/{id}',[MyController::class,'goto']);
+Route::get('/', function () {
+    return view('index');
+});
+Route::get('/',[MyController::class,'index'])->name('index');
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';

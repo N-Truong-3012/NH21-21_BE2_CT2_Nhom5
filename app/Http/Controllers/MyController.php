@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\DemoProduct;
-
+use Illuminate\Support\Facades\DB;
+use App\Models\Products;
+//use database\seeders\products;
 class MyController extends Controller
 {
     /**
@@ -23,11 +24,10 @@ class MyController extends Controller
         return view($id);
     }
 
-    function getAllProducts(){
-        $product = DemoProduct::all();
-        return view('demoindex',['product'=>$product]);
+    public function getAllProducts(){
+        $product = Products::all();
+        return view('index',['product'=>$product,]);
     }
-
     /**
      * Show the form for creating a new resource.
      *
