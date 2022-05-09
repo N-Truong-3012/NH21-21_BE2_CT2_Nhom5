@@ -63,8 +63,8 @@
 						<!-- LOGO -->
 						<div class="col-md-3">
 							<div class="header-logo">
-								<a href="#" class="logo">
-									<img src="./img/logo.png" alt="">
+								<a href="/" class="logo">
+									<img src="../img/logo.png" alt="">
 								</a>
 							</div>
 						</div>
@@ -170,13 +170,12 @@
 				<div id="responsive-nav">
 					<!-- NAV -->
 					<ul class="main-nav nav navbar-nav">
-						<li class="active"><a href="#">Home</a></li>
-						<li><a href="#">Hot Deals</a></li>
-						<li><a href="#">Categories</a></li>
-						<li><a href="#">Laptops</a></li>
-						<li><a href="#">Smartphones</a></li>
-						<li><a href="#">Cameras</a></li>
-						<li><a href="#">Accessories</a></li>
+						<li ><a href="/"style="color: red;">Home</a></li>
+						<li><a href="{{ route('product',3)}}">Television</a></li>
+						<li><a href="{{ route('product',2)}}">Laptops</a></li>
+    					<li><a href="{{ route('product',1)}}">Smartphones</a></li>
+  						<li><a href="{{ route('product',5)}}">Speaker</a></li>
+    					<li><a href="{{ route('product',4)}}">HeadPhone</a></li>
 					</ul>
 					<!-- /NAV -->
 				</div>

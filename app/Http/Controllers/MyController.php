@@ -26,7 +26,23 @@ class MyController extends Controller
 
     public function getAllProducts(){
         $product = Products::all();
-        return view('index',['product'=>$product,]);
+        $feature = Products::where("Feature",'1')-> get()->take(10);
+        $featurePhone = Products::where("Feature",'1')->where("Type_ID", '1')-> get()->take(3);
+        $featureTivi = Products::where("Feature",'1')->where("Type_ID", '3')-> get()->take(3);
+        $featureLaptop = Products::where("Feature",'1')->where("Type_ID", '2')-> get()->take(3);
+        return view('index',[
+            'product'=>$product,
+            'feature' => $feature,
+            'featurePhone' => $featurePhone,
+            'featureLaptop' => $featureLaptop,
+            'featureTivi' => $featureTivi,
+        ]);
+    }
+    public function getProductByID($id){
+        $productByID = Products::where('type_id',$id)->get();
+        return view('product',[
+            'productByID'=>$productByID,
+        ]);
     }
     /**
      * Show the form for creating a new resource.
