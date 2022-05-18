@@ -36,7 +36,7 @@
 											<div class="product-body">
 												<p class="product-category">Category</p>
 												<h3 class="product-name"><a href="#">{{$row->Product_Name}}</a></h3>
-												<h4 class="product-price">{{$row->Price}} VND </h4>
+												<h4 class="product-price">{{ number_format($row->Price,0)}} VND </h4>
 												<div class="product-btns">
 													<button class="quick-view"><a href="{{ route('detail')}}"><i class="fa fa-eye"></i></a><span class="tooltipp">quick view</span></button>
 												</div>

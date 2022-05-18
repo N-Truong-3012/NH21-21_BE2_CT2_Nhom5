@@ -24,7 +24,7 @@ class MyController extends Controller
         return view($id);
     }
 
-    public function getAllProducts(){
+    public function getProducts(){
         $product = Products::all();
         $feature = Products::where("Feature",'1')-> get()->take(10);
         $featurePhone = Products::where("Feature",'1')->where("Type_ID", '1')-> get()->take(3);
@@ -38,11 +38,21 @@ class MyController extends Controller
             'featureTivi' => $featureTivi,
         ]);
     }
-    public function getProductByID($id){
+    public function getProductByTypeID($id){
         $productByID = Products::where('type_id',$id)->get();
         return view('product',[
             'productByID'=>$productByID,
         ]);
+    }
+    public function getDetailProduct($id){
+        $detailProduct = Products::where('Product_ID',$id)->get();
+        return view('detail',[
+            'detailProduct'=>$detailProduct,
+        ]);
+    }
+    public function showProductBySearch($key){
+        $productSearch = Products::where('Product_Name', 'Like', '%' . $key . '%')->get();
+        return $productSearch;
     }
     /**
      * Show the form for creating a new resource.

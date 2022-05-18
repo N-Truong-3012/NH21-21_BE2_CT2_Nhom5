@@ -73,14 +73,9 @@
 						<!-- SEARCH BAR -->
 						<div class="col-md-6">
 							<div class="header-search">
-								<form>
-									<select class="input-select">
-										<option value="0">All Categories</option>
-										<option value="1">Category 01</option>
-										<option value="1">Category 02</option>
-									</select>
-									<input class="input" placeholder="Search here">
-									<button class="search-btn">Search</button>
+								<form class="search-key">
+									<input class="input" placeholder="Search here" oninput="searchProduct(this.value)" name="key">
+									<div id="search-result" class="result-search"></div>
 								</form>
 							</div>
 						</div>
@@ -187,41 +182,6 @@
 
 			@yield('content')
 
-		<!-- NEWSLETTER -->
-		<div id="newsletter" class="section">
-			<!-- container -->
-			<div class="container">
-				<!-- row -->
-				<div class="row">
-					<div class="col-md-12">
-						<div class="newsletter">
-							<p>Sign Up for the <strong>NEWSLETTER</strong></p>
-							<form>
-								<input class="input" type="email" placeholder="Enter Your Email">
-								<button class="newsletter-btn"><i class="fa fa-envelope"></i> Subscribe</button>
-							</form>
-							<ul class="newsletter-follow">
-								<li>
-									<a href="#"><i class="fa fa-facebook"></i></a>
-								</li>
-								<li>
-									<a href="#"><i class="fa fa-twitter"></i></a>
-								</li>
-								<li>
-									<a href="#"><i class="fa fa-instagram"></i></a>
-								</li>
-								<li>
-									<a href="#"><i class="fa fa-pinterest"></i></a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<!-- /row -->
-			</div>
-			<!-- /container -->
-		</div>
-		<!-- /NEWSLETTER -->
 
 		<!-- FOOTER -->
 		<footer id="footer">
@@ -327,6 +287,6 @@ Downloaded from <a href="{{asset('https://themeslab.org/')}}" target="_blank">Th
 		<script src="js/nouislider.min.js"></script>
 		<script src="js/jquery.zoom.min.js"></script>
 		<script src="js/main.js"></script>
-
+		<script src="js/ajax.js"></script>
 	</body>
 </html>

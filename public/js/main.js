@@ -64,14 +64,7 @@
 	/////////////////////////////////////////
 
 	// Product Main img Slick
-	$('#product-main-img').slick({
-    infinite: true,
-    speed: 300,
-    dots: false,
-    arrows: true,
-    fade: true,
-    asNavFor: '#product-imgs',
-  });
+
 
 	// Product imgs Slick
   $('#product-imgs').slick({
