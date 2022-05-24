@@ -87,16 +87,15 @@
 											</div>
 											<div class="product-body">
 												<p class="product-category">Category</p>
-												<h3 class="product-name"><a href="{{ route('detail',$row->Product_ID)}}">{{$row->Product_Name}}</a></h3>
+												<h3 class="product-name"><a href="{{ route('detail',$row->id)}}">{{$row->Product_Name}}</a></h3>
 												<h4 class="product-price">{{ number_format($row->Price,0)}} VND </h4>
 												<div class="product-btns">
-													<button class="quick-view"><a href="{{ route('detail',$row->Product_ID)}}"><i class="fa fa-eye"></i></a><span class="tooltipp">quick view</span></button>
+													<button class="quick-view"><a href="{{ route('detail',$row->id)}}"><i class="fa fa-eye"></i></a><span class="tooltipp">quick view</span></button>
 												</div>
 											</div>
 											<div class="add-to-cart">
-								<a href="{{ route('checkout',$row->Product_ID)}}"><button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button></a>
-								
-							</div>
+											<a href="{{ route('cart.add',['id' => $row->id]) }}"><button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button></a>
+											</div>
 										</div>
 										@endforeach
 										<!-- /product -->
@@ -168,14 +167,14 @@
 											</div>
 											<div class="product-body">
 												<p class="product-category">Category</p>
-												<h3 class="product-name"><a href="{{ route('detail',$row->Product_ID)}}">{{$row->Product_Name}}</a></h3>
+												<h3 class="product-name"><a href="{{ route('detail',$row->id)}}">{{$row->Product_Name}}</a></h3>
 												<h4 class="product-price">{{ number_format($row->Price,0)}} VND</h4>
 												<div class="product-btns">
-													<button class="quick-view"><a href="{{ route('detail',$row->Product_ID)}}"><i class="fa fa-eye"></i></a><span class="tooltipp">quick view</span></button>
+													<button class="quick-view"><a href="{{ route('detail',$row->id)}}"><i class="fa fa-eye"></i></a><span class="tooltipp">quick view</span></button>
 												</div>
 											</div>
 											<div class="add-to-cart">
-											<a href="{{ route('cart.add',['id'=>$row->Product_ID])}}"><button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button></a>
+											<a href="{{ route('cart.add',['id'=>$row->id])}}"><button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button></a>
 								
 							</div>
 										</div>
@@ -223,7 +222,7 @@
 									</div>
 									<div class="product-body">
 										<p class="product-category">Category</p>
-										<h3 class="product-name"><a href="{{ route('detail',$row->Product_ID)}}">{{$row->Product_Name}}</a></h3>
+										<h3 class="product-name"><a href="{{ route('detail',$row->id)}}">{{$row->Product_Name}}</a></h3>
 										<h4 class="product-price">{{ number_format($row->Price,0)}} VND</h4>
 									</div>
 								</div>
@@ -240,7 +239,7 @@
 									</div>
 									<div class="product-body">
 										<p class="product-category">Category</p>
-										<h3 class="product-name"><a href="{{ route('detail',$row->Product_ID)}}">{{$row->Product_Name}}</a></h3>
+										<h3 class="product-name"><a href="{{ route('detail',$row->id)}}">{{$row->Product_Name}}</a></h3>
 										<h4 class="product-price">{{ number_format($row->Price,0)}} VND</h4>
 									</div>
 								</div>
@@ -268,7 +267,7 @@
 									</div>
 									<div class="product-body">
 										<p class="product-category">Category</p>
-										<h3 class="product-name"><a href="{{ route('detail',$row->Product_ID)}}">{{$row->Product_Name}}</a></h3>
+										<h3 class="product-name"><a href="{{ route('detail',$row->id)}}">{{$row->Product_Name}}</a></h3>
 										<h4 class="product-price">{{ number_format($row->Price,0)}} VND</h4>
 									</div>
 								</div>
@@ -285,7 +284,7 @@
 									</div>
 									<div class="product-body">
 										<p class="product-category">Category</p>
-										<h3 class="product-name"><a href="{{ route('detail',$row->Product_ID)}}">{{$row->Product_Name}}</a></h3>
+										<h3 class="product-name"><a href="{{ route('detail',$row->id)}}">{{$row->Product_Name}}</a></h3>
 										<h4 class="product-price">{{ number_format($row->Price,0)}} VND</h4>
 									</div>
 								</div>
@@ -315,7 +314,7 @@
 									</div>
 									<div class="product-body">
 										<p class="product-category">Category</p>
-										<h3 class="product-name"><a href="{{ route('detail',$row->Product_ID)}}">{{$row->Product_Name}}</a></h3>
+										<h3 class="product-name"><a href="{{ route('detail',$row->id)}}">{{$row->Product_Name}}</a></h3>
 										<h4 class="product-price">{{ number_format($row->Price,0)}} VND</h4>
 									</div>
 								</div>
@@ -332,7 +331,7 @@
 									</div>
 									<div class="product-body">
 										<p class="product-category">Category</p>
-										<h3 class="product-name"><a href="{{ route('detail',$row->Product_ID)}}">{{$row->Product_Name}}</a></h3>
+										<h3 class="product-name"><a href="{{ route('detail',$row->id)}}">{{$row->Product_Name}}</a></h3>
 										<h4 class="product-price">{{ number_format($row->Price,0)}} VND</h4>
 									</div>
 								</div>

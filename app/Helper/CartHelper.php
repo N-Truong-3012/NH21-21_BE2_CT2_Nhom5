@@ -20,16 +20,16 @@ class CartHelper
     public function add($products,$quantity = 1)
     {
         $item = [
-            'Product_ID' => $products->Product_ID,
+            'id' => $products->id,
             'Product_Name' => $products->Product_Name,
             'Price' => $products->Price,
             'Image' => $products->Image,
             'quantity' => $quantity,
         ];
-        if(isset($this->items[$products->Product_ID])){
-            $this->items[$products->Product_ID]['quantity'] += $quantity;
+        if(isset($this->items[$products->id])){
+            $this->items[$products->id]['quantity'] += $quantity;
         }else {
-            $this->items[$products->Product_ID] = $item;
+            $this->items[$products->id] = $item;
         }
         session(['cart'=>$this->items]);
         //
@@ -66,7 +66,7 @@ class CartHelper
     {
         $t = 0;
         foreach($this->items as $item){
-            $t += $item['price']*$item['quantity'];
+            $t += $item['Price']*$item['quantity'];
         }
         return $t;
         //

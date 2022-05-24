@@ -28,9 +28,8 @@
 							<p><h4>Description: </h4>{{$row->Description}}</p>
 							<p>Quantity: {{$row->Quantity_Stock}}</p>
 							<div class="add-to-cart">
-								<a href="{{ route('checkout',$row->Product_ID)}}"><button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button></a>
-								
-							</div>
+											<a href="{{ route('cart.add',['id' => $row->id]) }}"><button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button></a>
+											</div>
 						</div>
 					</div>
 					<!-- /Product details -->

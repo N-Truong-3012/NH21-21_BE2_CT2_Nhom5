@@ -45,7 +45,7 @@ class MyController extends Controller
         ]);
     }
     public function getDetailProduct($id){
-        $detailProduct = Products::where('Product_ID',$id)->get();
+        $detailProduct = Products::where('id',$id)->get();
         return view('detail',[
             'detailProduct'=>$detailProduct,
         ]);

@@ -59,10 +59,12 @@
 							</div>
 							
 							<div class="order-products">
+							@foreach($cart->items as  $item)
 								<div class="order-col">
-									<div>1x Product Name Goes Here</div>
-									<div>$980.00 <a href="#"><i class="fa fa-trash"></i></a></div>								
+									<div>{{ $item['quantity'] }}x {{ $item['Product_Name'] }}</div>
+									<div>{{ number_format($item['Price']*$item['quantity'],0,',','.') }} VND <a href="{{route('cart.remove',['id' => $item['id']])}}"><i class="fa fa-trash"></i></a></div>
 								</div>
+                            @endforeach
 							</div>
 
 							<div class="order-col">
@@ -71,7 +73,7 @@
 							</div>
 							<div class="order-col">
 								<div><strong>TOTAL</strong></div>
-								<div><strong class="order-total">$2940.00</strong></div>
+								<div><strong class="order-total">{{number_format($cart ->total_price,0,',','.')}}VND</strong></div>
 							</div>
 						</div>
 						

@@ -15,8 +15,8 @@ class CartController extends Controller
         return view('checkout',['dulieu'=>$protype]);
     }
 
-    public function add(CartHelper $cart,$Product_ID){
-        $product = Products::Find($Product_ID);
+    public function add(CartHelper $cart,$id){
+        $product = Products::find($id);
         $cart->add($product);
         return redirect()->back();
     }

@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MyController;
 use App\Helper\CartHelper;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,7 +46,27 @@ require __DIR__.'/auth.php';
 
 Route::group(['prefix' => 'cart'],function(){
     Route::get('checkout',[CartController::class,'view'])->name('cart.view');
-    Route::get('add/{id}',[CartController::class,'add'])->name('cart.add');
-    Route::get('remove/{id}',[CartController::class,'remove'])->name('cart.remove');
-    Route::get('update/{id}',[CartController::class,'update'])->name('cart.update');
+    Route::get('add/{id?}',[CartController::class,'add'])->name('cart.add');
+    Route::get('remove/{id?}',[CartController::class,'remove'])->name('cart.remove');
+    Route::get('update/{id?}',[CartController::class,'update'])->name('cart.update');
+});
+
+Route::group(['prefix' => 'admin','namespace' => 'Admin'],function(){
+    Route::group(['prefix' => 'products'],function(){
+        Route::get('/',[AdminController::class,'index'])->name('products');
+        Route::get('del-{id}',[AdminController::class,'delete'])->name('product_del');
+        Route::get('edit-{id}',[AdminController::class,'edit'])->name('product_edit');
+        Route::post('edit-{id}',[AdminController::class,'post_editproduct'])->name('product_edit');
+        Route::get('add',[AdminController::class,'add'])->name('product_add');
+        Route::post('add',[AdminController::class,'post_add'])->name('product_add');
+    });
+
+    Route::group(['prefix' => 'protypes'],function(){
+        Route::get('/',[AdminController::class,'indextype'])->name('protypes');
+        Route::get('del-{id}',[AdminController::class,'deletetype'])->name('protypes_del');
+        Route::get('edit-{id}',[AdminController::class,'edittype'])->name('protypes_edit');
+        Route::post('edit-{id}',[AdminController::class,'post_edittype'])->name('protypes_edit');
+        Route::get('add',[AdminController::class,'addtype'])->name('protypes_add');
+        Route::post('add',[AdminController::class,'post_addtype'])->name('protypes_add');
+    });
 });
