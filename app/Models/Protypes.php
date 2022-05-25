@@ -8,7 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Protypes extends Model
 {
     use HasFactory;
+    protected $fillable = ['id','Type_Name'];
+    public $timestamps = false;
     function products(){
-        return $this->hasMany(Products::class, 'Type_ID','Type_ID');
+        return $this->hasMany(Products::class, 'Type_ID','id');
     }
 }

@@ -8,7 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Manufactures extends Model
 {
     use HasFactory;
+    protected $fillable = ['id','Manu_Name'];
+    public $timestamps = false;
     function products(){
-        return $this->hasMany(Products::class, 'Manu_ID','Manu_ID');
+        return $this->hasMany(Products::class, 'Manu_ID','id');
     }
 }

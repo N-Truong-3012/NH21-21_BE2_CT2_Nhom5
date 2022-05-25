@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Dashboard</title>
+    <title>Nhom 5- Admin</title>
 
     <!-- Custom fonts for this template-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
@@ -44,7 +44,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+                <div class="sidebar-brand-text mx-3">Nhom 5</div>
             </a>
 
             <!-- Divider -->
@@ -54,7 +54,7 @@
             <li class="nav-item active">
                 <a class="nav-link <?php if($page == 'dashboard'){echo 'active';}?>" href="{{ route('dashboard') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+                    <span>Admin</span></a>
             </li>
 
             <!-- Divider -->
@@ -69,7 +69,7 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fa-solid "></i>
+                    <i class="fa-solid fa-list-ul"></i>
                     <span>Product</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
@@ -90,7 +90,7 @@
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                            <a class="collapse-item <?php if($page == 'protypes'){echo 'active';}?>" href="">List of protypes</a>
+                            <a class="collapse-item <?php if($page == 'protypes'){echo 'active';}?>" href="{{route('protypes')}}">List of protypes</a>
                             <a class="collapse-item <?php if($page == 'protypeadd'){echo 'active';}?>" href="{{route('protypes_add')}}">Add Protype</a>
                     </div>
                 </div>
@@ -98,16 +98,16 @@
 
                  <!-- Nav Item - Utilities Collapse Menu -->
                  <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-                    aria-expanded="true" aria-controls="collapseUtilities">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                    aria-expanded="true" aria-controls="collapsePages">
                     <i class="fa-solid fa-list-ul"></i>
                     <span>Manufacture</span>
                 </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                <div id="collapsePages" class="collapse" aria-labelledby="headingPages"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                            <a class="collapse-item " href="">List of manufacture</a>
-                            <a class="collapse-item " href="">Add Manufacture</a>
+                            <a class="collapse-item " href="{{route('manu')}}">List of manufacture</a>
+                            <a class="collapse-item " href="{{route('manu_add')}}">Add Manufacture</a>
                     </div>
                 </div>
             </li>
@@ -138,13 +138,7 @@
                     <form
                         class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
-                            </div>
+                            <p>Nguyen Nhat Truong / Luu Duc Huy</P>
                         </div>
                     </form>
 
@@ -161,16 +155,7 @@
                             <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
                                 aria-labelledby="searchDropdown">
                                 <form class="form-inline mr-auto w-100 navbar-search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small"
-                                            placeholder="Search for..." aria-label="Search"
-                                            aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-primary" type="button">
-                                                <i class="fas fa-search fa-sm"></i>
-                                            </button>
-                                        </div>
-                                    </div>
+
                                 </form>
                             </div>
                         </li>
@@ -186,16 +171,11 @@
                                 @else
                                     <?php  return redirect()->route('login'); ?>
                                 @endif
-                                <img class="img-profile rounded-circle"
-                                    src="/img/smile.png">
+
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
-                                </a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -215,7 +195,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
+                        <span>Copyright &copy; Your Website 2022</span>
                     </div>
                 </div>
             </footer>

@@ -37,9 +37,7 @@ Route::get('/',[MyController::class,'getProducts'])->name('index');
 
 //Route::get('/store',[MyController::class,'getProducts'])->name('index');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/dashboard' ,[AdminController::class,'dashboard'])->middleware(['auth'])->name('dashboard');
 
 
 require __DIR__.'/auth.php';
@@ -61,12 +59,21 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'],function(){
         Route::post('add',[AdminController::class,'post_add'])->name('product_add');
     });
 
-    Route::group(['prefix' => 'protypes'],function(){
-        Route::get('/',[AdminController::class,'indextype'])->name('protypes');
-        Route::get('del-{id}',[AdminController::class,'deletetype'])->name('protypes_del');
-        Route::get('edit-{id}',[AdminController::class,'edittype'])->name('protypes_edit');
-        Route::post('edit-{id}',[AdminController::class,'post_edittype'])->name('protypes_edit');
+    Route::group(['prefix' => 'protype'],function(){
+        Route::get('/',[AdminController::class,'hienthitype'])->name('protypes');
+        Route::get('del-{id}',[AdminController::class,'deletetype'])->name('protype_del');
+        Route::get('edit-{id}',[AdminController::class,'edittype'])->name('protype_edit');
+        Route::post('edit-{id}',[AdminController::class,'post_edittype'])->name('protype_edit');
         Route::get('add',[AdminController::class,'addtype'])->name('protypes_add');
         Route::post('add',[AdminController::class,'post_addtype'])->name('protypes_add');
+    });
+
+    Route::group(['prefix' => 'manu'],function(){
+        Route::get('/',[AdminController::class,'hienthimanu'])->name('manu');
+        Route::get('del-{id}',[AdminController::class,'deletemanu'])->name('manu_del');
+        Route::get('edit-{id}',[AdminController::class,'editmanu'])->name('manu_edit');
+        Route::post('edit-{id}',[AdminController::class,'post_editmanu'])->name('manu_edit');
+        Route::get('add',[AdminController::class,'addmanu'])->name('manu_add');
+        Route::post('add',[AdminController::class,'post_addmanu'])->name('manu_add');
     });
 });

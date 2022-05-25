@@ -1,4 +1,3 @@
-
 @extends('admin')
 @section('content')
 <?php $page = 'productadd';?>
@@ -9,12 +8,11 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Thêm Loại Phẩm</h1>
+            <h1>Thêm Hãng Sản Phẩm</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-
-              <li class="breadcrumb-item active">Protypes Add</li>
+              <li class="breadcrumb-item active">Manufacture Add</li>
             </ol>
           </div>
         </div>
@@ -31,9 +29,9 @@
                     <div class="card-body">
                         <div class="form-group">
                             <label for="inputName">Tên</label>
-                            <input type="text" name="Type_Name" id="inputName" class="form-control" placeholder="Nhập " >
-                            @if($errors->has('Type_Name'))
-                                <p style="color:red"> {{$errors->first('Type_Name') }} !!!</p>
+                            <input type="text" name="Manu_Name" id="inputName" class="form-control" placeholder="Nhập " >
+                            @if($errors->has('Manu_Name'))
+                                <p style="color:red"> {{$errors->first('Manu_Name') }} !!!</p>
                             @endif
                         </div>
       
@@ -45,8 +43,8 @@
         </div>
         <div class="row p-1">
             <div class="col-12">
-                <a href="{{ route('protypes') }}" class="btn btn-secondary">Cancel</a>
-                <input type="submit" value="Create new Protype" class="btn btn-success float-right" >
+                <a href="{{ route('manu') }}" class="btn btn-secondary">Cancel</a>
+                <input type="submit" value="Create new Manufacture" class="btn btn-success float-right" >
             </div>
         </div>
         </form>

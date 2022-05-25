@@ -24,7 +24,8 @@
                     <div class="card-body p-0">
                         <!-- Nested Row within Card Body -->
                         <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+                            <div class="col-lg-6 d-none d-lg-block bg-login-image">
+                            </div>
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
@@ -47,26 +48,11 @@
                                             <input type="password" class="form-control form-control-user" name="password"
                                             id="password" placeholder="Password" required autocomplete="current-password" >
                                         </div>
-                                        <div class="form-group">
-                                            <label for="remember_me" class="inline-flex items-center">
-                                                <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="remember">
-                                                <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                                            </label>
-                                        </div>
                                         <x-button class="signup btn btn-primary btn-user btn-block">
                                                         {{ __('Log in') }} 
                                         </x-button>
                                     </form>
                                     <hr>
-                                                   
-                                    <div class="text-center">
-                                        @if (Route::has('password.request'))
-                                            <a class="small"href="{{ route('password.request') }}"> {{ __('Forgot your password?') }}</a>
-                                        @endif
-                                    </div>
-                                    <div class="text-center">
-                                        <a class="small" href="{{route('register')}}">Create an Account!</a>
-                                    </div>
                                 </div>
                             </div>
                         </div>

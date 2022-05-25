@@ -12,7 +12,6 @@
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
               <li class="breadcrumb-item active">Edit Product</li>
             </ol>
           </div>
@@ -41,8 +40,8 @@
                             <select id="inputType" name="Type_ID" class="form-control custom-select">
                             <option selected disabled>Select one</option>
                             @foreach($allprotype as $protype)
-                                <?php $selected = $protype->Type_ID == $suasp->Type_ID ? 'selected' : ''; ?>
-                                <option {{ $selected }} value ='{{ $protype -> Type_ID }}'> {{ $protype -> Type_Name  }}</option>
+                                <?php $selected = $protype->id == $suasp->Type_ID ? 'selected' : ''; ?>
+                                <option {{ $selected }} value ='{{ $protype -> id }}'> {{ $protype -> Type_Name  }}</option>
                             @endforeach
                             </select>
                             @if($errors->has('Type_ID'))
@@ -54,8 +53,8 @@
                             <select id="inputType" name="Manu_ID" class="form-control custom-select">
                             <option selected disabled>Select one</option>
                             @foreach($allmanu as $manu)
-                                <?php $selected = $manu->Manu_ID == $suasp->Manu_ID ? 'selected' : ''; ?>
-                                <option {{ $selected }} value ='{{ $manu -> Manu_ID }}'> {{ $manu -> Manu_Name  }}</option>
+                                <?php $selected = $manu->id == $suasp->Manu_ID ? 'selected' : ''; ?>
+                                <option {{ $selected }} value ='{{ $manu -> id }}'> {{ $manu -> Manu_Name  }}</option>
                             @endforeach
                             </select>
                             @if($errors->has('Manu_ID'))
@@ -88,8 +87,8 @@
                         </div>
                         <div class="form-group">
                                 <label for="inputPrice">Feature</label><br>
-                                <input type="checkbox" value="0" name="Feature" ischecked> Nổi Bật</input>
-                                <input type="checkbox" value="1"  name="Feature">Không</input>
+                                <input type="checkbox" value="0" name="Feature" ischecked> Nổi Bật </input>
+                                <input type="checkbox" value="1"  name="Feature"> Không</input>
                         </div>
                         <div class="form-group">
                             <label for="quantity_stock">Tồn Kho</label>

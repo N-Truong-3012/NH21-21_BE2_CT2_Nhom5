@@ -40,8 +40,10 @@ class MyController extends Controller
     }
     public function getProductByTypeID($id){
         $productByID = Products::where('type_id',$id)->get();
+        $productID = Products::where('type_id',$id)->get(3);
         return view('product',[
             'productByID'=>$productByID,
+            'productID'=>$productID,
         ]);
     }
     public function getDetailProduct($id){
