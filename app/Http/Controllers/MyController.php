@@ -39,17 +39,17 @@ class MyController extends Controller
         ]);
     }
     public function getProductByTypeID($id){
-        $productByID = Products::where('type_id',$id)->get();
-        $productID = Products::where('type_id',$id)->get(3);
+        $productByID = Products::where('Type_ID',$id)->get();
         return view('product',[
             'productByID'=>$productByID,
-            'productID'=>$productID,
         ]);
     }
     public function getDetailProduct($id){
-        $detailProduct = Products::where('id',$id)->get();
+        $detailProduct = Products::find($id);
+        $relatedProducts = Products::where("Type_ID", $detailProduct->Type_ID)-> get();
         return view('detail',[
             'detailProduct'=>$detailProduct,
+            'relatedProducts' => $relatedProducts,
         ]);
     }
     public function showProductBySearch($key){

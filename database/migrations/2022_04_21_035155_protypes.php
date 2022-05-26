@@ -14,7 +14,7 @@ class Protypes extends Migration
     public function up()
     {
         Schema::create('protypes', function (Blueprint $table) {
-            $table->id('Type_ID');
+            $table->increments('id');
             $table->string('Type_Name');
         });
 

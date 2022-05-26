@@ -94,7 +94,7 @@
 										@foreach($cart->items as  $item)
 											<div class="product-widget">
 												<div class="product-img">
-													<img src="./img/{{ $item['Image'] }}" alt="">
+													<img src="../img/{{ $item['Image'] }}" alt="">
 												</div>
 												<div class="product-body">
 													<h3 class="product-name"><a href="#">{{ $item['Product_Name'] }}</a></h3>
@@ -219,11 +219,12 @@
 		<!-- /FOOTER -->
 
 		<!-- jQuery Plugins -->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
+		<script src="{{asset('js/ajax.js')}}"></script>
+		<script src="{{asset('js/jquery.min.js')}}"></script>
+		<script src="{{asset('js/bootstrap.min.js')}}"></script>
 		<script src="js/slick.min.js"></script>
-		<script src="js/nouislider.min.js"></script>
-		<script src="js/jquery.zoom.min.js"></script>
-		<script src="js/main.js"></script>
+		<script src="{{asset('js/nouislider.min.js')}}"></script>
+		<script src="{{asset('js/jquery.zoom.min.js')}}"></script>
+		<script src="{{asset('js/main.js')}}"></script>
 	</body>
 </html>

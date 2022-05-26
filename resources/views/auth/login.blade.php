@@ -51,6 +51,9 @@
                                         <x-button class="signup btn btn-primary btn-user btn-block">
                                                         {{ __('Log in') }} 
                                         </x-button>
+                                        <div class="text-center">
+                                        <a class="small" href="{{route('register')}}">Create an Account!</a>
+                                    </div>
                                     </form>
                                     <hr>
                                 </div>

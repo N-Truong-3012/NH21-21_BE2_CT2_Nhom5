@@ -77,7 +77,7 @@
 							</div>
 						</div>
 						
-						<a href="#" class="primary-btn order-submit">Purcharse</a>
+						<a href="/" onclick="return alert('Cảm ơn bạn đã mua sắm');" class="primary-btn order-submit">Purcharse</a>
 					</div>
 					<!-- /Order Details -->
 				</div>
