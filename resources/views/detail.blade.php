@@ -43,13 +43,12 @@
 							<div>
 								@foreach($relatedProducts as $row)
 								<!-- product widget -->
-								<div class="col-md-4 mt-5"style="margin-top: 25px;" >
+								<div class="col-md-4"style="margin-top: 25px;" >
 								<div class="product-widget">
 									<div class="product-img">
 										<img src="../img/{{$row->Image}}" alt="">
 									</div>
 									<div class="product-body">
-										<p class="product-category">Category</p>
 										<h3 class="product-name"><a href="{{ route('detail',$row->id)}}">{{$row->Product_Name}}</a></h3>
 										<h4 class="product-price">{{ number_format($row->Price,0)}} VND</h4>
 									</div>
