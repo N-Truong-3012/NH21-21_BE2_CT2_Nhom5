@@ -62,7 +62,7 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Interface
+                List
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
@@ -195,7 +195,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2022</span>
+                        <span>Copyright &copy; Nhóm 5</span>
                     </div>
                 </div>
             </footer>

@@ -25,7 +25,7 @@ class MyController extends Controller
     }
 
     public function getProducts(){
-        $product = Products::all();
+        $product = Products::orderBy('id','DESC')->get();
         $feature = Products::where("Feature",'1')-> get()->take(10);
         $featurePhone = Products::where("Feature",'1')->where("Type_ID", '1')-> get()->take(3);
         $featureTivi = Products::where("Feature",'1')->where("Type_ID", '3')-> get()->take(3);
